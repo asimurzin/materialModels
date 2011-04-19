@@ -43,7 +43,7 @@ class rheologyModel( IOdictionary ):
         from Foam.OpenFOAM import Switch
         self.planeStress_ = Switch( self.lookup( word( "planeStress" ) ) )
 
-        from Foam.applications.solvers.newStressAnalysis.materialModels.rheologyModel.rheologyLaws import rheologyLaw
+        from materialModels.rheologyModel.rheologyLaws import rheologyLaw
         self.lawPtr_ = rheologyLaw.New( word( "law" ), self.sigma_, self.subDict( word( "rheology" ) ) )
         pass
            
@@ -204,7 +204,7 @@ class rheologyModel( IOdictionary ):
         if regIOobject.read( self ):
            self.lookup("planeStress") >> self.planeStress_
            from Foam.OpenFOAM import word
-           from Foam.applications.solvers.newStressAnalysis.materialModels.rheologyModel.rheologyLaws import rheologyLaw
+           from materialModels.rheologyModel.rheologyLaws import rheologyLaw
            self.lawPtr_ = rheologyLaw.New( word( "law" ), self.sigma_, self.subDict("rheology"));
 
            return True 

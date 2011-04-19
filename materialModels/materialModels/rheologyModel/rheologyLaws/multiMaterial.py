@@ -22,7 +22,7 @@
 ##
 
 #----------------------------------------------------------------------------
-from Foam.applications.solvers.newStressAnalysis.materialModels.rheologyModel.rheologyLaws import rheologyLaw
+from materialModels.rheologyModel.rheologyLaws import rheologyLaw
 
 
 #----------------------------------------------------------------------------

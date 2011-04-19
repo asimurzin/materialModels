@@ -102,7 +102,7 @@ class rheologyLaw:
         
         ext_Info() << "Selecting rheology model " << key << nl
 
-        from Foam.applications.solvers.newStressAnalysis.materialModels.rheologyModel.rheologyLaws import addDictionaryConstructorTable
+        from materialModels.rheologyModel.rheologyLaws import addDictionaryConstructorTable
         if addDictionaryConstructorTable.dictionaryTable.has_key( key ):
 
            className = addDictionaryConstructorTable.dictionaryTable[ key ]
